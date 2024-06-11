@@ -9,3 +9,15 @@ function fac(n) {
 }
 
 console.log(fac(5));
+
+// Direct
+function prinNUm(min, max) {
+  if (min > max) {
+    return;
+  }
+
+  prinNUm(min + 1, max);
+  console.log(min);
+}
+
+prinNUm(1, 5);

@@ -22,4 +22,26 @@ function countVowels(str) {
   }
   return count;
 }
-console.log(countVowels("jello"));
+
+function recursiveCountVowels(str, strLength) {
+  console.log(
+    `Length: ${strLength}, current String: ${str.substring(0, strLength)}`
+  );
+  if (strLength === 1) {
+    console.log("Base case got hit hare");
+
+    console.log(`base case ${Number(isVowel(str[0]))}`);
+    return Number(isVowel(str[0]));
+  }
+  //   return (
+  //     recursiveCountVowels(str, str.length - 1) + isVowel(str[strLength - 1])
+
+  //   );
+
+  let res =
+    recursiveCountVowels(str, strLength - 1) + isVowel(str[strLength - 1]);
+  console.log(`count after checking:${str(strLength - 1)} : ${res}`);
+  return res;
+}
+let myString = "Hello";
+console.log(recursiveCountVowels(myString, myString.length));

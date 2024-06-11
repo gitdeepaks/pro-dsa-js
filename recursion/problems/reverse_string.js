@@ -36,3 +36,11 @@ function recursiveReverseString(str) {
 }
 
 console.log(recursiveReverseString("hello"));
+
+const reverseString = (str) =>
+  str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
+//   if (str === "") {
+//     return "";
+//   }
+//   console.log(str.substr(1));
+//   return reverseString(str.substr(1)) + str.charAt(0);

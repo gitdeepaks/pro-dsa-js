@@ -1,6 +1,6 @@
 // factorial
 
-function fac(n) {
+function fac(n: number) {
   if (n === 0) {
     return 1;
   }
@@ -11,7 +11,7 @@ function fac(n) {
 console.log(fac(5));
 
 // Direct
-function prinNUm(min, max) {
+function prinNUm(min: number, max: number) {
   if (min > max) {
     return;
   }

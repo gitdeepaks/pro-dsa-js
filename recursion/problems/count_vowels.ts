@@ -1,6 +1,6 @@
 // count vowels in a string
 
-function isVowel(char) {
+function isVowel(char: string) {
   let loweChar = char.toLowerCase();
   let vowels = "aeiou";
 
@@ -12,7 +12,7 @@ function isVowel(char) {
   }
 }
 
-function countVowels(str) {
+function countVowels(str: string) {
   let count = 0;
 
   for (let i = 0; i < str.length; i++) {
@@ -23,7 +23,7 @@ function countVowels(str) {
   return count;
 }
 
-function recursiveCountVowels(str, strLength) {
+function recursiveCountVowels(str: string, strLength: number) {
   console.log(
     `Length: ${strLength}, current String: ${str.substring(0, strLength)}`
   );
@@ -40,8 +40,8 @@ function recursiveCountVowels(str, strLength) {
 
   let res =
     recursiveCountVowels(str, strLength - 1) + isVowel(str[strLength - 1]);
-  console.log(`count after checking:${str(strLength - 1)} : ${res}`);
+  console.log(`count after checking: ${str[strLength - 1]} : ${res}`);
   return res;
 }
-let myString = "Hello";
+let myString: string = "Hello";
 console.log(recursiveCountVowels(myString, myString.length));

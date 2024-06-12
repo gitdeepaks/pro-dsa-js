@@ -3,7 +3,7 @@
 // iterative
 // Hello
 
-function reverseString(str) {
+function reverseString(str: string) {
   let rev = "";
   let len = str.length - 1;
 
@@ -16,7 +16,7 @@ function reverseString(str) {
 
 // console.log(reverseString("hello"));
 
-function recursiveReverseString(str) {
+function recursiveReverseString(str: string) {
   console.log(`current : ${str}`); //winding
   // Base case
   if (str === "") {
@@ -37,7 +37,7 @@ function recursiveReverseString(str) {
 
 console.log(recursiveReverseString("hello"));
 
-const reverseString = (str) =>
+const revString = (str: string) =>
   str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
 //   if (str === "") {
 //     return "";

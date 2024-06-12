@@ -1,6 +1,6 @@
 // sum of numbers till n
 
-function getSum(value) {
+function getSum(value: number) {
   if (value == 1) {
     return value;
   } else {

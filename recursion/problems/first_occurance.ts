@@ -1,6 +1,6 @@
 //iterative
 
-function firstOccurance(arr, findMe, currIndex) {
+function firstOccurance(arr: [], findMe: number, currIndex: number) {
   while (currIndex < arr.length) {
     if (arr[currIndex] == findMe) {
       if (arr[currIndex] == findMe) {
@@ -13,7 +13,7 @@ function firstOccurance(arr, findMe, currIndex) {
 }
 
 // recursive
-function recursiveFirstOccurance(arr, findMe, currIndex) {
+function recursiveFirstOccurance(arr: [], findMe: number, currIndex: number) {
   if (arr.length === currIndex) {
     return -1;
   }

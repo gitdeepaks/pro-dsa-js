@@ -1,6 +1,6 @@
 // iterative
 
-function fibonacci(value) {
+function fibonacci(value: number) {
   let n0 = 0;
   let n1 = 1;
 
@@ -16,7 +16,7 @@ function fibonacci(value) {
 console.log(fibonacci(6));
 
 // recursive
-function fib(val) {
+function fib(val: number) {
   if (val <= 1) {
     return val;
   }

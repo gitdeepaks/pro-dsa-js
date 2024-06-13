@@ -12,4 +12,10 @@ const createGraph = (edges) => {
     graph[a].push(b);
     graph[b].push(a);
   }
+  return graph;
 };
+
+function fuinalDunctionBundle(edges, start, dest) {
+  const graph = createGraph(edges);
+  return hasPathRec(graph, start, dest);
+}

@@ -11,11 +11,16 @@ const graf: Graf = {
   f: ["e"],
 };
 
-function bfsFS(graph: Graf, startPoint: string, visited = new Set()) {
-  const queue = [startPoint];
+function bfsFS(
+  graph: Graf,
+  startPoint: string,
+  visited: Set<string> = new Set()
+) {
+  const queue: string[] = [startPoint];
+  visited.add(startPoint);
 
   while (queue.length > 0) {
-    const node: any = queue.shift();
+    const node = queue.shift()!;
     for (const neighbour of graf[node]) {
       if (!visited.has(neighbour)) {
         visited.add(neighbour);

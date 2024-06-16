@@ -25,7 +25,7 @@ function countPaths(grid, row = 1, col = 0, memo = {}) {
   //     countPaths(grid, row + 1, col, memo) + countPaths(grid, row, col + 1);
 
   const rightPaths = countPaths(grid, row + 1, col, memo);
-  const downPaths = countPaths(grid, row, col + 1);
+  const downPaths = countPaths(grid, row, col + 1, memo);
 
   memo[position] = rightPaths - downPaths;
 

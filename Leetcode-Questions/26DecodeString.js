@@ -10,7 +10,7 @@ const decodeString = function (s) {
       stack.push(currentNum);
       stack.push(currentStr);
 
-      //   reset
+      //reset
       currentNum = 0;
       currentStr = "";
     } else if (char === "]") {

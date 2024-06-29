@@ -1,0 +1,46 @@
+// Map
+
+const number = [1, 2, 3, 4, 5];
+
+const mul = number.map((num, index, arr) => num * 3 + index);
+
+console.log(mul);
+
+// filter
+const moreThanTw0 = number.filter((num) => num > 2);
+console.log(moreThanTw0);
+
+// Reduce
+const sumOfAllElement = number.reduce((acc, currVal, i, arr) => {
+  return acc + currVal;
+}, 0);
+
+console.log(sumOfAllElement);
+
+// Polyfills
+
+// Array.map((num, i, arr) => {});
+
+Array.prototype.myMap = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    temp.push(cb(this[i], i, this));
+  }
+  return temp;
+};
+
+const mulMyMap = number.myMap((num, index, arr) => num * 2 + index);
+console.log(mulMyMap);
+
+// custom filter
+
+Array.prototype.myFilter = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i, this)) this.push(this[i]);
+  }
+  return temp;
+};
+
+const moreThanTw0Custom = number.myFilter((num) => num > 2);
+console.log(moreThanTw0Custom);

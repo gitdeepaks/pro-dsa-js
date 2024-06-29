@@ -34,13 +34,29 @@ console.log(mulMyMap);
 
 // custom filter
 
-Array.prototype.myFilter = function (cb) {
-  let temp = [];
+// Array.prototype.myFilter = function (cb) {
+//   let temp = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i], i, this)) this.push(this[i]);
+//   }
+//   return temp;
+// };
+
+// const moreThanTw0Custom = number.myFilter((num) => num > 2);
+// console.log(moreThanTw0Custom);
+
+Array.prototype.myReduce = function (cb, initVal) {
+  let acc = initVal;
+
   for (let i = 0; i < this.length; i++) {
-    if (cb(this[i], i, this)) this.push(this[i]);
+    acc = acc ? cb(acc, this[i], i, this) : this[i];
   }
-  return temp;
+
+  return acc;
 };
 
-const moreThanTw0Custom = number.myFilter((num) => num > 2);
-console.log(moreThanTw0Custom);
+const sumOfAllElementC = number.myReduce((acc, currVal, i, arr) => {
+  return acc + currVal;
+}, 0);
+
+console.log(sumOfAllElementC);

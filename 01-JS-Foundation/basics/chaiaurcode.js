@@ -141,3 +141,30 @@
 // console.log(totalMarks);
 
 // console.log(names);
+
+// Functions
+
+// function square(num) {
+//   return num * num;
+// }
+
+// const square2 = function (num) {
+//   // anonymous functions
+//   return num * num;
+// };
+
+// square(5);
+
+// (function (x) {
+//   return (function (y) {
+//     console.log(x);
+//   })(2);
+// })(1);
+
+// callback functions
+
+//Arrow function
+
+const add = (fName, sName) => {
+  return fName + sName;
+};

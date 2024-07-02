@@ -165,6 +165,13 @@
 
 //Arrow function
 
-const add = (fName, sName) => {
-  return fName + sName;
-};
+// const add = (fName, sName) => {
+//   return fName + sName;
+// };
+
+// closures and lexical scopes
+
+var username = "Deepak";
+function local() {
+  console.log(username);
+}

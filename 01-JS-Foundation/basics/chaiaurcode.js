@@ -171,7 +171,81 @@
 
 // closures and lexical scopes
 
-var username = "Deepak";
-function local() {
-  console.log(username);
+// var username = "Deepak";
+// function local() {
+//   console.log(username);
+// }
+
+// closures
+// function createBase(num) {
+//   return function (innerNum) {
+//     console.log(innerNum + num);
+//   };
+// }
+
+// const addSix = createBase(6);
+// addSix(10);
+// addSix(21);
+
+// Block Scope and setTimeout
+// function a(params) {
+//   for (var i = 0; i < 3; i++) {
+//     function inner(i) {
+//       setTimeout(function log() {
+//         console.log(i); // what is logged ?
+//       }, i * 1000);
+//     }
+//   }
+//   inner(i);
+// }
+
+// a();
+
+// how to use closure to create  a private counter ?
+
+// function counter() {
+//   var _counter = 0;
+
+//   function add(increment) {
+//     _counter += increment;
+//   }
+
+//   function retrive() {
+//     return "Counter  = " + _counter;
+//   }
+
+//   return {
+//     add,
+//     retrive,
+//   };
+// }
+
+// const c = counter();
+// c.add(5);
+// c.add(10);
+
+// Module Pattern
+
+// var Module = (function () {
+//   function privateMethod() {
+//     //do something
+//     console.log("private");
+//   }
+
+//   return {
+//     publicMethod: function () {
+//       //can call privateMethod()
+//       console.log("public");
+//     },
+//   };
+// })();
+
+// Module.publicMethod();
+// Module.privateMethod();
+
+// Make this run inly once
+let view;
+
+function likeThis() {
+  let called = 0;
 }
